@@ -1,0 +1,26 @@
+{
+  "name": "news-site-node",
+  "version": "1.0.0",
+  "description": "Node server that displays news from an external API and serves a static file.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DasPeter/news-site-node.git"
+  },
+  "author": "Pedro G",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DasPeter/news-site-node/issues"
+  },
+  "homepage": "https://github.com/DasPeter/news-site-node#readme",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7"
+  }
+}
