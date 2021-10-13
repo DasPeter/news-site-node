@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="assets/styles/styles.css" />
+		<base href="/" />
+		<link rel="stylesheet" href="styles/styles.css" />
 		<title>Practica 1 - Compiladores JS</title>
 	</head>
 	<body>
@@ -20,11 +20,28 @@
 			</div>
 		</header>
 		<div class="container">
-			<div id="news-container" class="grid"></div>
+			<div id="news-container" class="grid">
+				{{#each news}}
+					<div class="article col-2">
+						<img class="picture" src="{{urlToImage}}" />
+						<h2>{{title}}</h2>
+						<p>{{description}}</p>
+						<a href="{{url}}" target="_blank">Ver más</a>
+					</div>
+				{{/each}}
+			</div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"
+		></script>
 		<script src="assets/scripts/main.js" type="module"></script>
+		<script>
+			const searchButton = document.getElementById("search-button");
+			searchButton.addEventListener("click", searchNews); function searchNews(){
+			window.location = "/?search=" +
+			document.getElementById("searchQuery").value }
+		</script>
 	</body>
 </html>

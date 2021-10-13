@@ -10,4 +10,6 @@ app.listen(port, () => {
 	console.log("App listening on port " + port);
 });
 
+// Todo el contenido de la carpeta public será servido
+app.use(express.static("public"));
 app.use("/", newsRouter);

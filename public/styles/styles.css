@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #4b644a;
+  padding: 10px;
+}
+header h1 {
+  margin: 0;
+  padding: 0 12px;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.container {
+  padding: 5%;
+}
+
+.grid > div {
+  box-sizing: border-box;
+  float: left;
+  text-align: justify;
+  border: solid 1px #333;
+  background-color: #d9dcd6;
+}
+.grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #4b644a;
+}
+
+header div {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.button, .button-secondary, .button-primary {
+  padding: 6px 12px;
+  border: solid #333 1px;
+  border-radius: 4px;
+}
+
+.button-primary {
+  background-color: #4b644a;
+  color: white;
+}
+
+.button-secondary {
+  background-color: #d9dcd6;
+  color: white;
+}
+
+.article {
+  margin: 1%;
+  border-radius: 25px;
+}
+.article h2,
+.article p {
+  padding: 10px;
+}
+.article h2 {
+  font-size: large;
+}
+.article p {
+  font-size: small;
+}
+.article a {
+  padding-left: 20px;
+  font-size: small;
+  text-align: right;
+}
+
+.picture {
+  width: 100%;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.col-2 {
+  width: 16.667%;
+}
+
+@media screen and (max-width: 768px) {
+  .col-2 {
+    width: 33.333%;
+  }
+
+  .col-1 {
+    width: 33.333%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .col-4:nth-child(-n+2) {
+    width: 50%;
+  }
+  .col-4:nth-child(3) {
+    width: 100%;
+  }
+
+  .col-3 {
+    width: 50%;
+  }
+
+  .col-2 {
+    width: 50%;
+  }
+
+  .col-1 {
+    width: 50%;
+  }
+}
